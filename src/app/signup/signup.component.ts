@@ -20,7 +20,12 @@ export class SignupComponent implements OnInit {
     console.log("DOB: " + form.dob);
     console.log("Form Submitted!!!!");
     alert('SUCCESS!! \n\n');
-    this.router.navigateByUrl("/login");
+    if(form.user==="Member"){
+      this.router.navigateByUrl("/memberlogin");
+    }
+    else{
+      this.router.navigateByUrl("/login");
+    }
   }
 
   // registerForm: FormGroup;
